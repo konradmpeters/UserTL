@@ -1,0 +1,23 @@
+{
+  "name": "nodejshostinghttps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "startDev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "msnodesqlv8": "^0.8.6",
+    "mssql": "^6.0.1",
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,46 @@
+get https://localhost:3443/
+
+####
+
+get https://localhost:3443/users/GetAll
+
+####
+
+post https://localhost:3443/users/UserLogin
+Content-Type: application/json
+
+{
+    "UserEmail": "RoyGriffith@gmail.com",
+    "UserPassword": "Password"
+}
+
+#####
+
+# @token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRW1haWwiOiJSb3lHcmlmZml0aEBnbWFpbC5jb20iLCJVc2VySUQiOjUsImlhdCI6MTU4MTY0NTc3MCwiZXhwIjoxNTgxNjQ5MzcwfQ.ycRs2I6WXIpf70LIwsZBCS9giw0dWvjTiLGxyfZOKTo
+
+# get http://localhost:3001/users/UserLogout
+# Content-Type: application/json
+
+####
+
+post https://localhost:3443/users/UserSave
+Content-Type: application/json
+
+{
+    "UserID": -1,
+    "UserEmail": "SusanPeters@gmail.com",
+    "UserPassword": "Password",
+    "Group": "Admin",
+    "FirstName": "Susan",
+    "LastName": "Peters",
+	"New_UserID": -1
+}
+
+#####
+
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRW1haWwiOiJSb3lHcmlmZml0aEBnbWFpbC5jb20iLCJVc2VySUQiOjUsImlhdCI6MTU4MTY0MTE2OSwiZXhwIjoxNTgxNjQ0NzY5fQ.Xu1lQs1dzJY-ZV4NsYRRAO5ouXJPwPEpaYOUgADSf5U
+
+delete https://localhost:3443/users/11
+Authorization: {{token}}
+
+
