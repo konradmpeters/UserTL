@@ -5,10 +5,10 @@ const Port = process.env.port || 3443;  //443
 const https = require('https');
 const fs = require('fs');
 
-app.get('/', (req, res) => {
-    console.log('Hello HTTPS!');
-    res.send('Hello HTTPS!');
-})
+// app.get('/', (req, res) => {
+//     console.log('Hello HTTPS!');
+//     res.send('Hello HTTPS!');
+// })
 
 https.createServer({
     key: fs.readFileSync('server.key'),
